@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 20% 0 0;
+}
+a {
+  display: block;
+}
+#nav {
+  padding: 0;
+  width: 48%;
+  min-width: 400px;
+  height: 100%;
+  text-align: right;
+  display: block;
+}
+#nav-mobile {
+  display: none;
+}
+#main-content {
+  float: right;
+  width: 50%;
+  min-width: 400px;
+  margin: 0;
+}
+#sobre{
+  display: none;
+}
+#projetos{
+  display: none;
+}
+#contato{
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 0;
+    margin: auto;
+  }
+  a {
+    display: inline;
+  }
+  #nav-mobile {
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+  #nav {
+    display: none;
+  }
+  #main-content {
+    width: 80%;
+    float: none;
+    min-width: 0;
+    margin: 10%;
+  }
+}
