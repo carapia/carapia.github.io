@@ -1,7 +1,7 @@
 ---
 title: Sobre
 layout: default
-order: 1
+order: 2
 ---
 
 ## Sobre
