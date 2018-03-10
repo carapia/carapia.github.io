@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | Gustavo Carapiá</title>
+    <link rel="stylesheet" href="assets/estilo.css">
+    <script src="assets/script.js" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="topo">
+        <header>
+          <h1>Gustavo Carapiá</h1>
+        </header>
+        <nav>
+          <ul>
+            {% assign mypages = site.pages | sort: "order" %}
+              {% for page in mypages %}
+              <li>> <a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+              {% endfor %}
+            </ul>
+        </nav>
+      </div>
+      <main>
+        {{content}}
+      </main>
+      <footer>
+        <hr>
+        Esse website foi desenvolvido por <a href="#">Gustavo Carapiá</a>.
+      </footer>
+    </div>
+  </body>
+</html>
