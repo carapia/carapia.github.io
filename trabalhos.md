@@ -1,7 +1,7 @@
 ---
 title: Trabalhos
 layout: default
-order: 2
+order: 3
 ---
 
 ## Trabalhos
