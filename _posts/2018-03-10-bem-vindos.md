@@ -1,6 +1,6 @@
 ---
 title: Bem vindos!
-layout: default
+layout: post
 data: 10 de março de 2018
 ---
 

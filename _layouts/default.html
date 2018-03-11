@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | Gustavo Carapiá</title>
-    <link rel="stylesheet" href="assets/estilo.css">
-    <script src="assets/script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="{{ "/assets/estilo.css" | relative_url }}">
+    <script src="{{ "/assets/script.js" | relative_url }}" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -16,11 +16,10 @@
         </header>
         <nav>
           <ul>
-            {% assign mypages = site.pages | sort: "order" %}
-              {% for page in mypages %}
-              <li>> <a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
-              {% endfor %}
-            </ul>
+            {% for link in site.data.nav %}
+            <li>> <a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          <ul>
         </nav>
       </div>
       <main>
@@ -28,6 +27,11 @@
       </main>
       <footer>
         <hr>
+        <ul>
+          <li><b>Email:</b> gustavogomespc@yahoo.com.br</li>
+          <li><b>Twitter:</b> @carapia</li>
+          <li><b>Instagram:</b> @gcarapia</li>
+        </ul>
         Esse website foi desenvolvido por <a href="https://carapia.github.io">Gustavo Carapiá</a>.
       </footer>
     </div>
